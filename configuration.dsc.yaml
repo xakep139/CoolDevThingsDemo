@@ -32,24 +32,4 @@ properties:
       settings:
         id: Microsoft.WindowsTerminal
         source: winget
-#    - resource: WinGetPackage
-#      id: vsPackage
-#      directives:
-#        description: Install Visual Studio 2022 Community
-#        module: Microsoft.WinGet.DSC
-#        allowPrerelease: true
-#      settings:
-#        id: Microsoft.VisualStudio.2022.Community
-#        source: winget
-#    - resource: InstallVSConfig
-#      dependsOn:
-#        - vsPackage
-#      directives:
-#        description: Install required VS workloads
-#        module: Microsoft.VisualStudio.DSC
-#        allowPrerelease: true
-#      settings:
-#        productId: Microsoft.VisualStudio.Product.Community
-#        channelId: VisualStudio.17.Release
-#        vsconfigFile: ${WinGetConfigRoot}\..\.vsconfig
   configurationVersion: 0.2.0
