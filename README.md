@@ -14,9 +14,8 @@
 
 - [Windows Sandbox - Windows Security | Microsoft Learn](https://learn.microsoft.com/en-us/windows/security/application-security/application-isolation/windows-sandbox/windows-sandbox-overview)
 - Installing winget on Windows Sandbox - [Use the winget tool to install and manage applications | Microsoft Learn](https://learn.microsoft.com/en-us/windows/package-manager/winget/#install-winget-on-windows-sandbox)
-  - Use release https://api.github.com/repos/microsoft/winget-cli/releases/103905297
   - `powershell -ExecutionPolicy Unrestricted -File .\winget.ps1`
-  - `winget.ps1` is located [here](./winget.ps1)
+  - Prepared `winget.ps1` is located [here](./winget.ps1)
 
 ## GitHub Copilot and GitHub Copilot chat:
 
