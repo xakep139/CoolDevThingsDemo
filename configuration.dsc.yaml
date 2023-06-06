@@ -1,0 +1,55 @@
+# yaml-language-server: $schema=https://aka.ms/configuration-dsc-schema/0.2
+properties:
+  assertions:
+    - resource: OsVersion
+      directives:
+        description: Verify min OS version requirement
+        module: Microsoft.Windows.Developer
+        allowPrerelease: true
+      settings:
+        MinVersion: "10.0.19041"
+  resources:
+    - resource: DeveloperMode
+      directives:
+        description: Enable Developer Mode
+        module: Microsoft.Windows.Developer
+        allowPrerelease: true
+      settings:
+        Ensure: Present
+    - resource: WinGetPackage
+      directives:
+        description: Install Notepad++
+        module: Microsoft.WinGet.DSC
+        allowPrerelease: true
+      settings:
+        id: Notepad++.Notepad++
+        source: winget
+    - resource: WinGetPackage
+      directives:
+        description: Install Windows Terminal
+        module: Microsoft.WinGet.DSC
+        allowPrerelease: true
+      settings:
+        id: Microsoft.WindowsTerminal
+        source: winget
+#    - resource: WinGetPackage
+#      id: vsPackage
+#      directives:
+#        description: Install Visual Studio 2022 Community
+#        module: Microsoft.WinGet.DSC
+#        allowPrerelease: true
+#      settings:
+#        id: Microsoft.VisualStudio.2022.Community
+#        source: winget
+#    - resource: InstallVSConfig
+#      dependsOn:
+#        - vsPackage
+#      directives:
+#        description: Install required VS workloads
+#        module: Microsoft.VisualStudio.DSC
+#        allowPrerelease: true
+#      settings:
+#        productId: Microsoft.VisualStudio.Product.Community
+#        channelId: VisualStudio.17.Release
+#        vsconfigFile: ${WinGetConfigRoot}\..\.vsconfig
+  configurationVersion: 0.2.0
